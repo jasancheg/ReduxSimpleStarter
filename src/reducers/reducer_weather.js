@@ -1,4 +1,15 @@
-export default function(state = null, action) {
-  console.log('Action received', action);
+import { FETCH_WEATHER } from '../actions/index';
+
+export default function(state = [], action) {
+
+  // never do state = something
+  // Avoid mutate the state by do push
+  // or any operation over the same state
+  // concat is a good solution for it and
+  // return a complete new value
+  switch(type) {
+    case FETCH_WEATHER:
+      return [action.payload.data, ...state];
+  }
   return state;
 }
