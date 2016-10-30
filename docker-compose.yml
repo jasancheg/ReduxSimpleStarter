@@ -8,4 +8,4 @@ services:
       - .:/usr/src/app
     command: npm start
     ports:
-      - "8100:8100"
+      - "8080:8080"
